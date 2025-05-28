@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>питер питер питер</title>
+<!-- библиотека анимаций Anime.js -->
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Любименький СПБ</h1>
+</header>
+
+<section class="intro">
+  <h2>Город на Неве — сердце России</h2>
+  <p>
+    Санкт-Петербург — один из самых красивых и культурных городов России, известный своей богатой историей, великолепной архитектурой и живописными каналами.
+  </p>
+  <p>
+    Город, где каждая улица и каждый мост рассказывают свою уникальную историю. Помимо исторических достопримечательностей, он славится уютными кафе, театрами и музеями.
+  </p>
+</section>
+
+<section class="gallery">
+  <h2 style="text-align:left; color:var(--main-color); margin-bottom:15px;">Красоты города</h2>
+  <img src="img/qqq.jpg" alt="Дворцовая площадь" />
+  <img src="img/isaak.jpeg" alt="Исаакиевский собор" />
+  <img src="img/kazan.jpg" alt="Казанский собор" />
+
+</section>
+
+<section class="places">
+  <h3>Известные места</h3>
+  <div class="place">
+    <img src="img/ermitag.jpg" alt="Эрмитаж" />
+    <p>
+      Эрмитаж — один из крупнейших художественных музеев мира, расположенный в Зимнем дворце. Его коллекции поражают богатством и разнообразием.
+    </p>
+  </div>
+
+  <div class="place">
+    <img src="img/isaak.jpeg" alt="Исаакиевский собор" />
+    <p>
+      Исаакиевский собор — великолепный образец российской архитектуры XVIII века, один из символов города.
+    </p>
+  </div>
+  <div class="place">
+    <img src="img/neva.jpg" alt="Набережная реки Нева" />
+    <p>
+      Прогулки вдоль набережных каждой из рек и каналов создают неповторимую атмосферу Петербурга, особенно в вечернее время.
+    </p>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Санкт-Петербург — город мечты и вдохновения ( и соли )</p>
+</footer>
+
+<script>
+//анимация для "Красоты городаыв"
+  anime({
+    targets: 'h2',
+    translateX: [-100, 0],
+    opacity: [0, 1],
+    duration: 1500,
+    easing: 'easeOutElastic(1, .6)',
+    delay: anime.stagger(300)
+  });
+ // анимация для известных мест 
+  anime({
+    targets: 'h3',
+    scale: [0.5, 1],
+    opacity: [0,1],
+    duration: 1200,
+    easing: 'easeOutBack',
+    delay: 800
+  });
+
+  // анимация плавного появления абзацев 
+  anime({
+    targets: '.intro p',
+    translateY: [40,0],
+    opacity: [0,1],
+    duration: 1200,
+    delay: anime.stagger(600, {start: 1800}),
+    easing: 'easeOutExpo'
+  });
+
+  // анимация появления фоттографий известных мест
+  anime({
+    targets: '.place',
+    translateX: [40,0],
+    opacity: [0,1],
+    duration: 1200,
+    delay: anime.stagger(400, {start: 2500}),
+    easing: 'easeOutExpo'
+  });
+</script>
+
+</body>
+</html>
